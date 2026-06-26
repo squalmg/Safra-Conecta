@@ -1,0 +1,2 @@
+import { NextResponse } from 'next/server';import { listMachines, listProviders, listRequests } from '@/lib/data';
+export async function GET(){const [requests,providers,machines]=await Promise.all([listRequests(),listProviders(),listMachines()]);return NextResponse.json({producers:new Set(requests.map(r=>r.producer_whatsapp)).size,providers:providers.length,machines:machines.length,open_requests:requests.filter(r=>!['finalizado','cancelado','perdido'].includes(r.status)).length})}

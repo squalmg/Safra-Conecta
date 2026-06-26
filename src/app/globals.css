@@ -1,0 +1,2 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+:root{background:#F7F2E8;color:#1F2933} body{min-height:100vh} input,select,textarea{color:#1F2933} .grain{background-image:radial-gradient(circle at 20% 20%,rgba(217,164,65,.2),transparent 24%),linear-gradient(135deg,#123D2A,#1d5a3e)}

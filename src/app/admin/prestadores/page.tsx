@@ -1,0 +1,2 @@
+import { AdminLayout } from '@/components/Layouts';import { ProviderCard } from '@/components/Cards';import { listProviders } from '@/lib/data';
+export default async function Page(){const rows=await listProviders();return <AdminLayout><h1 className="text-3xl font-black text-agro-dark">Prestadores</h1><div className="mt-6 grid gap-4">{rows.map(p=><ProviderCard key={p.id} provider={p}/>)}</div></AdminLayout>}
