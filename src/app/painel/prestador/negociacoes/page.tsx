@@ -1,0 +1,2 @@
+import { PublicLayout } from '@/components/Layouts';import { EmptyState } from '@/components/UI';
+export default function Page(){return <PublicLayout><section className="mx-auto max-w-5xl px-4 py-10"><h1 className="text-3xl font-black text-agro-dark">Negociações</h1><div className="mt-6"><EmptyState title="Negociações em preparação" description="Quando um produtor avançar com seu interesse, a negociação aparecerá aqui." href="/painel/prestador/oportunidades" label="Ver oportunidades"/></div></section></PublicLayout>}

@@ -1,0 +1,2 @@
+import { AdminLayout } from '@/components/Layouts';import { ServiceRequestCard } from '@/components/Cards';import { listRequests } from '@/lib/data';
+export default async function Page(){const rows=await listRequests();return <AdminLayout><h1 className="text-3xl font-black text-agro-dark">Pedidos</h1><div className="my-4 rounded-3xl bg-white p-4 text-sm shadow-soft">Filtros: status, cidade, estado, cultura, serviço, urgência e data prevista.</div><div className="grid gap-4">{rows.map(r=><ServiceRequestCard key={r.id} request={r}/>)}</div></AdminLayout>}

@@ -1,0 +1,2 @@
+import { AdminLayout } from '@/components/Layouts';import { MachineCard } from '@/components/Cards';import { listMachines } from '@/lib/data';
+export default async function Page(){const rows=await listMachines();return <AdminLayout><h1 className="text-3xl font-black text-agro-dark">Máquinas</h1><div className="mt-6 grid gap-4 md:grid-cols-2">{rows.map(m=><MachineCard key={m.id} machine={m}/>)}</div></AdminLayout>}
